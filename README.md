@@ -1,28 +1,43 @@
 # Mushroom Classifier Studio
 
-A polished Streamlit portfolio project built from the guided Coursera app **"Build a Machine Learning Web App with Streamlit and Python."**  
-This version preserves the original machine learning workflow while improving the interface, code structure, documentation, and presentation for GitHub, LinkedIn, CV, and freelance portfolio use.
+A portfolio-ready Streamlit machine learning app based on the Coursera guided project **"Build a Machine Learning Web App with Streamlit and Python."**
+
+This upgraded version keeps the original learning objective intact while improving the code structure, interface design, documentation, and overall presentation. The result is a cleaner and more professional project for GitHub, LinkedIn, CV, and freelance portfolio use.
 
 ## Overview
 
-This application uses the mushroom classification dataset to compare three supervised learning models:
+The app uses the mushroom classification dataset to compare three supervised learning models:
 
 - Support Vector Machine (SVM)
 - Logistic Regression
 - Random Forest
 
-Users can select a classifier, adjust key hyperparameters, train the model, and review evaluation metrics and plots in a clean dark-themed Streamlit interface.
+Users can:
+
+- choose a classifier
+- adjust relevant hyperparameters
+- train and evaluate the model
+- review key metrics
+- inspect confusion matrix, ROC, and precision-recall plots
+
+## Why This Project Stands Out
+
+- Preserves the original guided-project logic for honest before-and-after comparison
+- Presents the workflow in a cleaner dark-themed UI with stronger hierarchy and spacing
+- Adds practical help text for classifiers, hyperparameters, metrics, and plots
+- Organizes the code more clearly for readability and maintenance
+- Feels like a thoughtful student portfolio project rather than a raw tutorial upload
 
 ## Features
 
-- Professional dark-mode UI with a cleaner layout and stronger visual hierarchy
-- Sidebar-driven model selection and parameter controls
-- Built-in help text for classifiers, hyperparameters, metrics, and plots
-- Stable training and evaluation flow with reusable functions
-- Performance metrics using `st.metric`
+- Dark-mode Streamlit interface with subtle visual polish
+- Sidebar-based classifier selection and parameter tuning
+- Compact hover help using native Streamlit widget help text
+- Stable cached dataset loading and structured train/evaluate flow
+- `st.metric` cards for accuracy, precision, and recall
 - Visual diagnostics for confusion matrix, ROC curve, and precision-recall curve
-- Dataset preview and feature overview tabs
-- Preserved baseline file (`base_app.py`) for direct comparison with the original guided project
+- Dataset preview and feature overview sections
+- Preserved baseline implementation in `base_app.py`
 
 ## Tech Stack
 
@@ -32,50 +47,64 @@ Users can select a classifier, adjust key hyperparameters, train the model, and 
 - scikit-learn
 - Matplotlib
 
+## Screenshots
+
+### Home and Controls
+
+![Home view](assets/screenshots/home.png)
+
+### Model Evaluation
+
+![Logistic regression evaluation](assets/screenshots/logistic_regression_evaluation.png)
+
+![Random forest results](assets/screenshots/random_forest_results.png)
+
+### Sidebar and Tuning Panel
+
+![SVM panel](assets/screenshots/svm_panel.png)
+
 ## Project Structure
 
 ```text
-project-root/
-├── app.py
-├── base_app.py
-├── mushrooms.csv
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── LICENSE
-└── assets/
-    └── screenshots/
+streamlit-ml-classifier-app/
+|-- app.py
+|-- base_app.py
+|-- mushrooms.csv
+|-- requirements.txt
+|-- README.md
+|-- .gitignore
+|-- LICENSE
+`-- assets/
+    `-- screenshots/
 ```
 
 ## Guided Project vs Enhancement
 
-### What the original guided project included
+### Original Guided Project
 
-- Mushroom dataset loading
-- Basic classifier selection
-- Hyperparameter inputs
-- Training and test split
-- Accuracy, precision, and recall output
-- Confusion matrix, ROC curve, and precision-recall plots
+- Loaded the mushroom dataset
+- Let the user choose a classifier
+- Included basic hyperparameter controls
+- Split the data into training and testing sets
+- Reported accuracy, precision, and recall
+- Displayed confusion matrix, ROC curve, and precision-recall curve
 
-### What was added in this upgraded version
+### Portfolio Enhancements Added
 
-- A modern, dark-themed portfolio presentation
-- Cleaner function decomposition and more maintainable code
-- Improved sidebar organization and help text
-- Better metric presentation with `st.metric`
-- Structured landing section, summary cards, and tabs
-- Updated plotting flow using current scikit-learn display utilities
-- Stable cached data loading and session-state based result handling
-- Improved repository documentation and project packaging
+- Rebuilt the app with a cleaner layout and more polished dark theme
+- Improved code organization with reusable functions and clearer naming
+- Added better sectioning, summary cards, and main/sidebar flow
+- Updated plotting and presentation for a more professional visual result
+- Added concise help text throughout the interface
+- Improved repository structure, README quality, and licensing
 
-## Setup Instructions
+## Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/OmarNayyar/streamlit-ml-classifier-app.git
+cd streamlit-ml-classifier-app
 ```
 
 ### 2. Create and activate a virtual environment
@@ -99,20 +128,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-After launch, open the local Streamlit URL shown in the terminal.
+Then open the local Streamlit URL shown in your terminal.
 
 ## Future Improvements
 
-- Add cross-validation as an optional evaluation mode
-- Add downloadable prediction summaries or experiment snapshots
-- Add a lightweight model comparison table across multiple runs
+- Add optional cross-validation mode
+- Add a lightweight multi-model comparison summary
+- Add exportable experiment results
 - Deploy the app on Streamlit Community Cloud
 
 ## Author
 
 **Omar Nayyar**  
-Portfolio project upgrade based on an original Coursera guided exercise.
+Machine learning and software portfolio project built from an original Coursera guided exercise.
 
 ## License
 
-This project uses the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
